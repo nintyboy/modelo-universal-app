@@ -1,15 +1,27 @@
 {
   "expo": {
-    "name": "solito-expo-router",
-    "slug": "solito-expo-router",
+    "name": "modelo-universal",
+    "slug": "modelo-universal",
     "version": "1.0.0",
-    "scheme": "solito-expo-router",
+    "scheme": "modelo-universal",
     "platforms": ["ios", "android"],
     "ios": {
-      "bundleIdentifier": "com.solito.expo-router"
+      "bundleIdentifier": "io.andfriends.modelo",
+      "googleServicesFile": "./firebase/GoogleService-Info.plist"
+    },
+    "android": {
+      "package": "io.andfriends.modelo",
+      "googleServicesFile": "./firebase/google-services.json"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "@react-native-firebase/app",
+      ["expo-build-properties", {
+        "ios": {
+          "useFrameworks": "static"
+        }
+      }
     ]
+  ]  
   }
 }

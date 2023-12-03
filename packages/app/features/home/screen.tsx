@@ -1,6 +1,8 @@
 import { Text, useSx, View, H1, P, Row, A } from 'dripsy'
+import { MotiPressable } from 'moti/interactions'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
+import { appName } from 'app/firebase/firebase'
 
 export function HomeScreen() {
   const sx = useSx()
@@ -69,6 +71,14 @@ export function HomeScreen() {
             Moti Link
           </Text>
         </MotiLink>
+        <MotiPressable onPress={appName}>
+          <Text
+            selectable={false}
+            sx={{ fontSize: 16, color: 'black', fontWeight: 'bold' }}
+          >
+            Get Firebase App Name
+          </Text>
+        </MotiPressable>
       </Row>
     </View>
   )

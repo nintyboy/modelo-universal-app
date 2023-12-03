@@ -14,6 +14,9 @@
   },
   "scripts": {
     "native": "cd apps/expo && yarn start",
+    "native:build:ios": "cd apps/expo && yarn build:dev:ios",
+    "native:build:android": "cd apps/expo && yarn build:android",
+    "native:prebuild": "cd apps/expo && yarn prebuild",
     "web": "cd apps/next && yarn next"
   },
   "resolutions": {
