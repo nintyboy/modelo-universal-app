@@ -1,8 +1,6 @@
-/**TODO: Things to add
- * [ ] Enable Log configuration based on enviroment
- * [ ] Add support for logging to a file
- * [ ] Add support for logging to a database
- */
+//TODO:[ ] Enable Log configuration based on enviroment
+//TODO:[ ] Add support for logging to a database
+//TODO:[ ] Pull in Config file to get this ready for production
 
 import { Platform } from 'react-native'
 
