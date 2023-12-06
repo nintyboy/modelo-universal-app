@@ -88,3 +88,11 @@ See my talk about this topic at Next.js Conf 2021:
 
 <a href="https://www.youtube.com/watch?v=0lnbdRweJtA"><img width="1332" alt="image" src="https://user-images.githubusercontent.com/13172299/157299915-b633e083-f271-48c6-a262-7b7eef765be5.png">
 </a>
+
+
+## Todo's 
+
+Here's a list of todo's to get this template up and running:
+[] Set up a simple context for each service layer like in this [example](https://github.com/makerkit/next-firebase-saas-kit/blob/main/src/pages/_app.tsx) lets start with the AuthProvider.
+[] Set up the Middleware to bounce unauthenticated users from protected routes but leave some routes open for a paywall render. [Middleware Example](https://github.com/makerkit/next-firebase-saas-kit/blob/main/src/core/middleware/with-authed-user.ts) / [Client-side render example](https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side)
+[] Set up deep-linking - It's part from the [expo docs](https://docs.expo.dev/guides/deep-linking/) - Part of the [Solito docs](https://solito.dev/recipes/deep-linking) - You can also test "locally" by pushing the next dev enviroment to ngrok.io
