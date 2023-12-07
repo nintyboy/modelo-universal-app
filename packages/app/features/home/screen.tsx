@@ -3,9 +3,14 @@ import { MotiPressable } from 'moti/interactions'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
 import { appName } from 'app/firebase/firebase'
+import {useRootStore} from 'app/stores/appContext'
+import { Logger } from 'app/utils/logger'
+
 
 export function HomeScreen() {
   const sx = useSx()
+  const {userStore} = useRootStore() 
+  
 
   return (
     <View
@@ -45,8 +50,11 @@ export function HomeScreen() {
           Regular Link
         </TextLink>
         <View sx={{ width: 32 }} />
-        <MotiLink
-          href="/user/fernando"
+        {/* <MotiLink
+          // href="/user/fernando"
+          onPress={() => {
+            
+          }}
           animate={({ hovered, pressed }) => {
             'worklet'
 
@@ -63,14 +71,18 @@ export function HomeScreen() {
             type: 'timing',
             duration: 150,
           }}
-        >
+        > */}
           <Text
+            onPress={() => {
+              userStore.toggleLogin()
+              Logger.debug(`${userStore.isLogged}`)
+            }}
             selectable={false}
             sx={{ fontSize: 16, color: 'black', fontWeight: 'bold' }}
           >
             Moti Link
           </Text>
-        </MotiLink>
+        {/* </MotiLink> */}
         <MotiPressable onPress={appName}>
           <Text
             selectable={false}
