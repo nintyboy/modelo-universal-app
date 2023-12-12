@@ -28,8 +28,8 @@
   "scripts": {
     "start": "expo start --dev-client",
     "prebuild": "expo prebuild --clean",
-    "build:dev:ios" : "npx expo run:ios",
-    "build:dev:android" : "npx expo run:android", 
+    "build:dev:ios": "npx expo run:ios",
+    "build:dev:android": "npx expo run:android",
     "android": "expo run:android",
     "ios": "expo run:ios"
   },

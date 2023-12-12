@@ -4189,6 +4189,8 @@ __metadata:
   resolution: "app@workspace:packages/app"
   dependencies:
     dripsy: ^4.3.1
+    mobx: ^6.12.0
+    mobx-react: ^9.1.0
     moti: latest
     solito: 4.0.1
   languageName: unknown
@@ -9391,6 +9393,47 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mobx-react-lite@npm:^4.0.4":
+  version: 4.0.5
+  resolution: "mobx-react-lite@npm:4.0.5"
+  dependencies:
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    mobx: ^6.9.0
+    react: ^16.8.0 || ^17 || ^18
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: b0a3e4345c1449eee7c0a6aa2369475024a0c8227e11305cc965229527e3ddede4ca7b8337912a7fe396e24bd83986f2a88a21813c51cabdc18330fa484023b5
+  languageName: node
+  linkType: hard
+
+"mobx-react@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "mobx-react@npm:9.1.0"
+  dependencies:
+    mobx-react-lite: ^4.0.4
+  peerDependencies:
+    mobx: ^6.9.0
+    react: ^16.8.0 || ^17 || ^18
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: f6de771d7df6da30548081a1718d12a1c24912e9e0d9e6c3b4fed6299d07145ace10a4a44eccb28d8c58b054f63ccce72e555c9c13c4f420b362d214fa83e23d
+  languageName: node
+  linkType: hard
+
+"mobx@npm:^6.12.0":
+  version: 6.12.0
+  resolution: "mobx@npm:6.12.0"
+  checksum: 482914d39199cadc8808907a2b9dbc634c74534d6c6d6cb34984c199aa94665ce07e7d183c0e97d54f4b06c8e42fec0a48c79484f4bbeac04a4dfd0f160290c6
+  languageName: node
+  linkType: hard
+
 "moti@npm:latest":
   version: 0.24.2
   resolution: "moti@npm:0.24.2"
@@ -12589,7 +12632,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:

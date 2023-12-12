@@ -1,19 +1,29 @@
 import { View, Text } from 'dripsy'
 import { createParam } from 'solito'
 import { TextLink } from 'solito/link'
+import AuthStateChangeHandler from '../auth/AuthStateChangeHandler'
+import { observer } from 'mobx-react-lite'
+import useStores from 'app/hooks/useStores'
 
 const { useParam } = createParam<{ id: string }>()
 
-export function UserDetailScreen() {
+const UserDetailScreen =  observer(() => {
   const [id] = useParam('id')
+  const {userStore} = useStores();
 
   return (
-    <View sx={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text
-        sx={{ textAlign: 'center', mb: 16, fontWeight: 'bold' }}
-      >{`User ID: ${id}`}</Text>
+    <>
+      <AuthStateChangeHandler />
+      <View sx={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text
+          sx={{ textAlign: 'center', mb: 16, fontWeight: 'bold' }}
+        >{`User ID: ${id}`}</Text>
 
-      <TextLink href="/">👈 Go Home</TextLink>
-    </View>
+        <Text onPress={userStore.toggleIsLoggedIn}>👈 Go Home</Text>
+      </View>
+    </>
   )
-}
+})
+
+
+export { UserDetailScreen }

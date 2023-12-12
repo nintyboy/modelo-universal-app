@@ -3,9 +3,12 @@ import { MotiPressable } from 'moti/interactions'
 import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
 import { appName } from 'app/firebase/firebase'
+import { observer } from 'mobx-react-lite'
+import useStores from 'app/hooks/useStores'
 
-export function HomeScreen() {
+const HomeScreen = observer(() => {
   const sx = useSx()
+  const {userStore} = useStores();
 
   return (
     <View
@@ -29,7 +32,7 @@ export function HomeScreen() {
             }}
             sx={{ color: 'blue' }}
           >
-            Fernando Rojo
+            Fernando Rojo & user is: {userStore.isLoggedIn ? 'logged in' : 'not logged in'}
           </A>
           .
         </P>
@@ -71,7 +74,7 @@ export function HomeScreen() {
             Moti Link
           </Text>
         </MotiLink>
-        <MotiPressable onPress={appName}>
+        <MotiPressable onPress={userStore.toggleIsLoggedIn }>
           <Text
             selectable={false}
             sx={{ fontSize: 16, color: 'black', fontWeight: 'bold' }}
@@ -82,4 +85,6 @@ export function HomeScreen() {
       </Row>
     </View>
   )
-}
+}); 
+
+export  {HomeScreen} 
