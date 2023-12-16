@@ -21,3 +21,5 @@ const AuthStateChangeHandler = observer(() => {
 })
 
 export default AuthStateChangeHandler
+
+// TODO: Need to add a SSR version of this for the Next app see: https://colinhacks.com/essays/nextjs-firebase-authentication
