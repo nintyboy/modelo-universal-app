@@ -74,7 +74,11 @@ const HomeScreen = observer(() => {
             Moti Link
           </Text>
         </MotiLink>
-        <MotiPressable onPress={userStore.toggleIsLoggedIn }>
+        <MotiPressable onPress={
+          ()=>{
+          userStore.toggleIsLoggedIn() 
+          appName()
+          }}>
           <Text
             selectable={false}
             sx={{ fontSize: 16, color: 'black', fontWeight: 'bold' }}

@@ -6,6 +6,7 @@ import RootProvider from './stores/RootProvider'
 
 export function Provider({ children }: { children: React.ReactNode }) {
   // const rootStore = new RootStore()
+
   return (
     <RootProvider>
       <FirebaseAppShell>
@@ -14,3 +15,5 @@ export function Provider({ children }: { children: React.ReactNode }) {
     </RootProvider>
   )
 }
+
+
